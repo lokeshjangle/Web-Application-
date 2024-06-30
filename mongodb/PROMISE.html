@@ -1,0 +1,17 @@
+<script>
+    //Promise is special type of object which perform only in asynchronous operation
+    //Initial state of promise is pending, then fulfiled and rejected state
+    //States in promise: 1) pending state 2) fulfiled state 3) Rejected state
+
+    var objPromise = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve({msg:"API Called",data:[10,20,30]})
+            reject({msg:"API Reject",data:null})
+        },3000)
+    })
+
+    console.log(objPromise)
+
+    objPromise
+    .then((results))
+</script>
